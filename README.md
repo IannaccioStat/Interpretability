@@ -52,7 +52,8 @@ factor correlation matrices directly with `interp.m`.
 3. SETUP AND DOCUMENTATION
 -------------------------------------------------------------------------------
 For step-by-step instructions on setting up the local environment and configuring 
-the MATLAB–R bridge required to execute the pipeline on ordinal/Likert data, 
-please consult the accompanying manual:
+the MATLAB–R bridge required to execute the pipeline on ordinal/Likert data and 
+sparse rotations, please consult the accompanying manual:
+
 
     README.pdf
