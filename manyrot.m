@@ -6,26 +6,24 @@ function rotations_struct = manyrot(A, methods, num_starts)
 %   rotations_struct = manyrot(A)
 %   rotations_struct = manyrot(A, 'all')
 %   rotations_struct = manyrot(A, {'varimax', 'oblimin', 'promax'}, 50)
-
     if nargin < 2 || isempty(methods)
         methods = 'all';
     end
     if nargin < 3 || isempty(num_starts)
         num_starts = 25; % Default multi-start iterations
     end
-
     % Standard benchmark methods in categorized order:
     % 1. Orthogonal: equamax, parsimax, quartimax, varimax
-    % 2. Oblique:    oblimin, promax
-    % 3. Sparse:     clf_sparse, geomin, infomax, mccammon
+    % 2. Oblique:    oblimin, bentler, promax
+    % 3. Modern/Entropy: geomin, infomax, mccammon
     all_methods = { ...
         'equamax', 'parsimax', 'quartimax', 'varimax', ... 
-        'oblimin', 'promax', ...                           
-        'clf_sparse', 'geomin', 'infomax', 'mccammon' ...  
+        'promax','oblimin', 'bentler', ...                
+        'geomin', 'infomax', 'mccammon' ...  
     };
     
     % Methods that utilize multi-start random initialization in GPA
-    multi_start_methods = {'oblimin', 'geomin', 'infomax', 'mccammon', 'clf_sparse'};
+    multi_start_methods = {'oblimin', 'bentler', 'geomin', 'infomax', 'mccammon'};
     
     if ischar(methods) || isstring(methods)
         if strcmpi(methods, 'all')

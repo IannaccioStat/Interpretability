@@ -11,6 +11,28 @@
 #   Input File  : 'temp_X_data.mat'  (Contains matrix X from MATLAB)
 #   Output File : 'temp_R_poly.mat'  (Exports R_poly, num_ordinal, num_continuous)
 #   Engine      : R psych package (psych::polychoric, psych::mixedCor)
+#
+# REFERENCES:
+#
+#   1. R psych Package:
+#      Revelle, W. (2024). psych: Procedures for Psychological, Psychometric, 
+#      and Personality Research. Northwestern University, Evanston, Illinois. 
+#      R package version 2.4.3. https://CRAN.R-project.org/package=psych
+#
+#   2. Polychoric & Tetrachoric Estimation Theory:
+#      Olsson, U. (1979). Maximum likelihood estimation of the polychoric correlation 
+#      coefficient. Psychometrika, 44(4), 443–460. 
+#      https://doi.org/10.1007/BF02296207
+#
+#   3. Polyserial Correlation (Mixed Continuous & Ordinal Data):
+#      Olsson, U., Drasgow, F., & Dorans, N. J. (1982). The polyserial correlation 
+#      coefficient. Psychometrika, 47(3), 337–347. 
+#      https://doi.org/10.1007/BF02294164
+#
+#   4. Correlation Matrix Smoothing (Positive Semi-Definiteness):
+#      Knol, D. L., & ten Berge, J. M. (1989). Least-squares approximation of an 
+#      inproper correlation matrix by a proper one. Psychometrika, 54(1), 53–61. 
+#      https://doi.org/10.1007/BF02294451
 # =============================================================================
 
 suppressPackageStartupMessages({

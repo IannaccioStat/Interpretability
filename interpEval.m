@@ -6,13 +6,13 @@ rng(123)
 
 % -------------------------------------------------------------------------
 %% --- DATASET CONFIGURATION ---
-dataset_name = 'BfiData'; 
+dataset_name = 'BostonData'; 
 fprintf('Loading dataset: %s...\n', dataset_name);
 eval(dataset_name); % Loads raw matrix X
-Q = 5;              % Target factor dimension
+Q = 3;              % Target factor dimension
 
 proc_opts = struct();
-proc_opts.is_ordinal = 1; % 0 = Continuous (Pearson); 1 = Ordinal (Polychoric)
+proc_opts.is_ordinal = 0; % 0 = Continuous (Pearson); 1 = Ordinal (Polychoric)
 
 %% STEP 1: PRE-PROCESSING & FACTOR EXTRACTION
 fprintf('\n--- Step 1: Processing Data & Extracting Factors via processData ---\n');
