@@ -37,7 +37,7 @@
 #      in limnology. Journal of Geology, 74(5), 721–726. 
 #      https://doi.org/10.1086/627202
 # =============================================================================
-
+set.seed(123)
 suppressPackageStartupMessages({
   suppressWarnings({
     library(GPArotation)
