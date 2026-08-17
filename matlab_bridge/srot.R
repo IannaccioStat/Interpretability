@@ -62,16 +62,16 @@ if (file.exists(input_file)) {
   
   tryCatch({
     if (method_str == "BENTLER") {
-      res <- bentlerQ(A_norm, random.starts = num_starts, normalize = FALSE)
+      res <- bentlerQ(A_norm, randomStarts = num_starts, normalize = FALSE)
       
     } else if (method_str == "GEOMIN") {
-      res <- geominQ(A_norm, random.starts = num_starts, normalize = FALSE)
+      res <- geominQ(A_norm, randomStarts = num_starts, normalize = FALSE)
       
     } else if (method_str == "INFOMAX") {
-      res <- infomaxQ(A_norm, random.starts = num_starts, normalize = FALSE)
+      res <- infomaxQ(A_norm, randomStarts = num_starts, normalize = FALSE)
       
     } else if (method_str == "MCCAMMON") {
-      res <- mccammon(A_norm, random.starts = num_starts, normalize = FALSE)
+      res <- mccammon(A_norm, randomStarts = num_starts, normalize = FALSE)
       
     } else {
       # Fallback for standard built-in functions in GPArotation
